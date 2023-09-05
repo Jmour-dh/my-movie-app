@@ -5,8 +5,10 @@ export const roboto = Roboto({
   weight: ["100", "300"],
   variable: "--font-roboto",
 });
+
 export const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["100", "300", "500", "700"],
   variable: "--font-montserrat",
 });
+

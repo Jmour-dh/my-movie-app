@@ -17,10 +17,10 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link href="/series"> Séries </Link>
+              <Link href="/series">Séries</Link>
             </li>
             <li>
-              <Link href="/movies"> Films </Link>
+              <Link href="/movies">Films</Link>
             </li>
           </ul>
         </nav>
