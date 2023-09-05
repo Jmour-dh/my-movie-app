@@ -18,6 +18,7 @@
 
   .content {
     padding: 5px 10px;
+    position: relative;
 
     .vote {
       display: flex;
@@ -32,7 +33,6 @@
       margin: 0;
       border: 1px solid $primaryColor;
       background-color: $whiteColor;
-
     }
 
     h3 {
