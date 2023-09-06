@@ -1,0 +1,18 @@
+@import "variables";
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .genre {
+    padding: 10px 0 ;
+    background-color: $primaryColor;
+    font-weight: bold;
+    flex: 0 0 calc(20% - 20px);
+
+    p {
+      margin: 0;
+    }
+  }
+}
