@@ -1,6 +1,6 @@
 "use client";
 import { useSelectedLayoutSegment, useParams, notFound } from "next/navigation";
-import styles from "./SearchSidebar.module.scss"
+import styles from "./SearchSidebar.module.scss";
 import Form from "./form/Form";
 
 const SearchSidebar = ({ genres }) => {
@@ -9,19 +9,20 @@ const SearchSidebar = ({ genres }) => {
 
   const getSidebarTitle = () => {
     if (!segment) {
-      return "films";
+      return "Films";
     }
     const genre = genres.find((genre) => genre.id === Number(id));
     if (!genre) {
-return notFound()
+      return notFound();
     }
     return genre.name;
   };
+
   const title = getSidebarTitle();
   return (
     <div className={styles.sidebar}>
-      <h1>Tous les &quot;{title}&quot; </h1>
-      <Form/>
+      <h1>Tous les &quot;{title}&quot;</h1>
+      <Form />
     </div>
   );
 };

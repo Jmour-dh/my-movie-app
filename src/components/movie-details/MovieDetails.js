@@ -1,7 +1,8 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Image from "next/image";
 import styles from "./MovieDetails.module.scss";
 import MovieCredits from "../movie-credits/MovieCredits";
+import { Suspense } from "react";
 
 const MovieDetails = ({ movie }) => {
   return (
@@ -28,21 +29,19 @@ const MovieDetails = ({ movie }) => {
             </span>
           </h1>
           <p className={styles.production}>
-            Production :
+            Production :{" "}
             <span>
-              {movie.production_companies 
-              .map((company) => company.name)
-              .join(", ")
-              }
+              {movie.production_companies
+                .map((company) => company.name)
+                .join(", ")}
             </span>
           </p>
           <h2>Synopsis</h2>
-          <p className={styles.overview}> {movie.overview} </p>
+          <p className={styles.overview}>{movie.overview}</p>
           <div className={styles.credits}>
-          <Suspense fallback={<p>Chargement ...</p>}>
-          <MovieCredits movieId={movie.id}/>
-          </Suspense>
-            
+            <Suspense fallback={<p>Chargement ...</p>}>
+              <MovieCredits movieId={movie.id} />
+            </Suspense>
           </div>
         </div>
       </div>
